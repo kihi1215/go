@@ -1,0 +1,64 @@
+### delve を手動で入れたときのログ（念の為）
+
+[40 15:20:08 root@2af9663a76a4 /go]
+$ find .
+.
+./src
+./bin
+
+[41 15:20:10 root@2af9663a76a4 /go]
+$ pwd
+/go
+
+[42 15:22:38 root@2af9663a76a4 /go]
+$ go get github.com/go-delve/delve/cmd/dlv
+
+[43 15:22:56 root@2af9663a76a4 /go]
+
+[52 15:25:18 root@2af9663a76a4 /go]
+$ find ./bin -ls
+   269964      4 drwxrwxrwx   1 root     root         4096 Nov 26 15:22 ./bin
+  1313302  15932 -rwxr-xr-x   1 root     root     16313977 Nov 26 15:22 ./bin/dlv
+
+
+[64 15:28:37 root@2af9663a76a4 /go]
+$ find ./src -maxdepth 4 -ls
+   269965      4 drwxrwxrwx   1 root     root         4096 Nov 26 15:22 ./src
+  1311732      4 drwxr-xr-x   3 root     root         4096 Nov 26 15:22 ./src/github.com
+  1311733      4 drwxr-xr-x   3 root     root         4096 Nov 26 15:22 ./src/github.com/go-delve
+  1311734      4 drwxr-xr-x  11 root     root         4096 Nov 26 15:22 ./src/github.com/go-delve/delve
+  1311832      4 -rw-r--r--   1 root     root         1770 Nov 26 15:22 ./src/github.com/go-delve/delve/README.md
+  1312018      4 -rw-r--r--   1 root     root          863 Nov 26 15:22 ./src/github.com/go-delve/delve/go.mod
+  1312261      4 drwxr-xr-x   6 root     root         4096 Nov 26 15:22 ./src/github.com/go-delve/delve/vendor
+  1311783      4 drwxr-xr-x   7 root     root         4096 Nov 26 15:22 ./src/github.com/go-delve/delve/Documentation
+  1312019      8 -rw-r--r--   1 root     root         7222 Nov 26 15:22 ./src/github.com/go-delve/delve/go.sum
+  1311830      4 -rw-r--r--   1 root     root         1079 Nov 26 15:22 ./src/github.com/go-delve/delve/LICENSE
+  1311831      4 -rw-r--r--   1 root     root          565 Nov 26 15:22 ./src/github.com/go-delve/delve/Makefile
+  1311781     28 -rw-r--r--   1 root     root        26796 Nov 26 15:22 ./src/github.com/go-delve/delve/CHANGELOG.md
+  1311829      4 -rw-r--r--   1 root     root          420 Nov 26 15:22 ./src/github.com/go-delve/delve/ISSUE_TEMPLATE.md
+  1311833      4 drwxr-xr-x  13 root     root         4096 Nov 26 15:22 ./src/github.com/go-delve/delve/_fixtures
+  1311778      4 -rw-r--r--   1 root     root           29 Nov 26 15:22 ./src/github.com/go-delve/delve/.gitattributes
+  1311994      4 drwxr-xr-x   2 root     root         4096 Nov 26 15:22 ./src/github.com/go-delve/delve/_scripts
+  1312010      4 drwxr-xr-x   3 root     root         4096 Nov 26 15:22 ./src/github.com/go-delve/delve/cmd
+  1311779      4 -rw-r--r--   1 root     root           76 Nov 26 15:22 ./src/github.com/go-delve/delve/.gitignore
+  1311777      4 -rw-r--r--   1 root     root          239 Nov 26 15:22 ./src/github.com/go-delve/delve/.deepsource.toml
+  1311735      4 drwxr-xr-x   8 root     root         4096 Nov 26 15:22 ./src/github.com/go-delve/delve/.git
+  1312020      4 drwxr-xr-x  12 root     root         4096 Nov 26 15:22 ./src/github.com/go-delve/delve/pkg
+  1311780      4 -rw-r--r--   1 root     root         1843 Nov 26 15:22 ./src/github.com/go-delve/delve/.travis.yml
+  1311782      4 -rw-r--r--   1 root     root         2440 Nov 26 15:22 ./src/github.com/go-delve/delve/CONTRIBUTING.md
+  1311762      4 -rw-r--r--   1 root     root          173 Nov 26 15:22 ./src/github.com/go-delve/delve/.cirrus.yml
+  1312005      4 drwxr-xr-x   2 root     root         4096 Nov 26 15:22 ./src/github.com/go-delve/delve/assets
+  1312216      4 drwxr-xr-x   9 root     root         4096 Nov 26 15:22 ./src/github.com/go-delve/delve/service
+
+
+[68 15:29:43 root@2af9663a76a4 /go]
+$ dlv version
+Delve Debugger
+Version: 1.5.0
+Build: $Id: ca5318932770ca063fc9885b4764c30bfaf8a199 $
+
+[69 15:29:46 root@2af9663a76a4 /go]
+
+
+
+
