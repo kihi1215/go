@@ -2,7 +2,7 @@ FROM golang:1.15
 
 LABEL maintainer="kihi"
 
-ARG BASH_PROMPT="'\[\033[33m\]\n[\! \t \u@\h \w]\n\$ \[\033[37m\]'"
+ARG BASH_PROMPT="'\[\033[33m\]\n[\! \t \u@\h \w]\n\\$ \[\033[37m\]'"
 ARG PORT="80"
 
 RUN go env -w GO111MODULE=on \
