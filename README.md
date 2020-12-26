@@ -3,6 +3,10 @@
 - あとは、VS-Codeでデバッグしようとすると、色々追加されるものを先に追加しようと思ったが、やめておく。
 vs-code で リモートでのgo言語の拡張機能を有効にする手作業は必要なので、その時にメッセージにしたがって、追加パッケージを入れればいいかな。（色々多すぎて嫌になったw）
 
+### build & run sample
+- `docker build -t go115:1 .`
+- `docker run -dit --name godev1 -h godev1 -p 8180:80 go115:1`
+
 ### メモ
 - bash のプロンプトの設定って dockerfile でどうやって設定するのが正解なのかな。
 - delve の [github](https://github.com/go-delve) はここ。
