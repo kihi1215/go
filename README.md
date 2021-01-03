@@ -13,3 +13,8 @@ vs-code で リモートでのgo言語の拡張機能を有効にする手作業
 - CGO_ENABLED=0 は 最終的には scratch をベースにバイナリファイルだけのイメージを作るので、設定してしまう。開発時は無駄なのかもしれないけど...
 - GO111MODULE=on は dlv を入れるときに、 /go/src にいっぱい入ってくるので、モジュールモードにした。（モジュールモードってのが今の主流？みたいなのがどこかに書いてあったような気もしたので、設定しておく。
 - go get aaa bbb ccc ddd eee と一気にいっぱい入れようとすると、docker build で エラーになった。半分づつにすると動いたりしたけど、未調査。
+
+### このdockerfileとは関係ないメモ
+- `docker run --name go115 -h go115 -dit --mount type=bind,source="$(pwd)",target=/go/src/app -w /go/src/app golang:1.15`
+- `docker exec -it go115 go fmt`
+- `docker exec -it go115 go build`
