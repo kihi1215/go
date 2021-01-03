@@ -15,7 +15,7 @@ vs-code で リモートでのgo言語の拡張機能を有効にする手作業
 - go get aaa bbb ccc ddd eee と一気にいっぱい入れようとすると、docker build で エラーになった。半分づつにすると動いたりしたけど、未調査。
 
 ### このdockerfileとは関係ないメモ
-- `docker run --name go115 -h go115 -dit --mount type=bind,source="$(pwd)",target=/go/src/app -w /go/src/app golang:1.15`
+- `docker run -dit --name go115 -h go115 -p 8180:80 --mount type=bind,source="$(pwd)",target=/go/src/app -w /go/src/app kihi1215/go:1.1`
 - `docker exec -it go115 go mod tidy`
 - `docker exec -it go115 go fmt`
 - `docker exec -it go115 go build`
