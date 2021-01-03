@@ -16,5 +16,6 @@ vs-code で リモートでのgo言語の拡張機能を有効にする手作業
 
 ### このdockerfileとは関係ないメモ
 - `docker run --name go115 -h go115 -dit --mount type=bind,source="$(pwd)",target=/go/src/app -w /go/src/app golang:1.15`
+- `docker exec -it go115 go mod tidy`
 - `docker exec -it go115 go fmt`
 - `docker exec -it go115 go build`
