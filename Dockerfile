@@ -1,4 +1,4 @@
-FROM golang:1.15
+FROM golang:1.15.7
 
 ARG BASH_PROMPT="'\[\033[33m\]\n[\! \t \u@\h \w]\n\\$ \[\033[37m\]'"
 ARG PORT="80"
